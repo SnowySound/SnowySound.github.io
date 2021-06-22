@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>Dockerfile 的常用命令</title>
+      <link href="/2021/06/22/Dockerfile-%E7%9A%84%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
+      <url>/2021/06/22/Dockerfile-%E7%9A%84%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Dockerfile-基础信息"><a href="#Dockerfile-基础信息" class="headerlink" title="Dockerfile 基础信息"></a>Dockerfile 基础信息</h2><h3 id="什么是Docerfile？"><a href="#什么是Docerfile？" class="headerlink" title="什么是Docerfile？"></a>什么是Docerfile？</h3><blockquote><p>Dockerfile 是一个用来构建镜像的文本文件，文本内容包含了一条条构建镜像所需的指令和说明。</p></blockquote><h3 id="Dockerfile-有什么作用？"><a href="#Dockerfile-有什么作用？" class="headerlink" title="Dockerfile 有什么作用？"></a>Dockerfile 有什么作用？</h3><p>制作镜像模板，运行 Dockfile，定义 docker 容器或容器中的应用程序以及服务</p><h3 id="Dockerfile-的基础结构"><a href="#Dockerfile-的基础结构" class="headerlink" title="Dockerfile 的基础结构"></a>Dockerfile 的基础结构</h3><p><span>#</span> 开头的表示注释行，说明 dockerfile 中的指令</p><ul><li>维护者的信息</li><li>镜像操作执行</li><li>容器操作指令</li><li>基础镜像信息</li></ul><h3 id="Dockerfile-常见命令"><a href="#Dockerfile-常见命令" class="headerlink" title="Dockerfile 常见命令"></a>Dockerfile 常见命令</h3><ul><li>FROM: 指定创建镜像的基础镜像</li><li>MAINTAINER: Dockerfile作者信息，一般写的是联系方式</li><li>RUN: 运行 Linux 系统的命令使用</li><li>CMD: 指定容器启动执行的命令；启动容器中的服务</li><li>LABEL: 指定生成镜像的源数据标签</li><li>EXPONSE: 指定镜像容器监听端口号；发布服务使用</li><li>ENV: 使用环境变量</li><li>ADD: 对压缩文件进行解压缩；将数据移动到指定目录</li><li>COPY: 复制宿主机数据到镜像内部使用</li><li>WORKDIR: 切换镜像容器中的指定目录中</li><li>VOLUME: 挂载数据卷到镜像容器中</li><li>USER: 指定运行容器的用户</li><li>ARG: 指定镜像的版本号信息</li><li>ONBUILD: 创建镜像，作为其他镜像的基础镜像运行操作指令</li><li>ENTRYPOINT: 指定运行容器启动过程执行命令，覆盖 CMD 参数</li><li>通俗解释常用指令的意义</li></ul><p><img src="https://my-blogimage.oss-cn-qingdao.aliyuncs.com/img/Dockerfile.png" alt="Dockerfile 常用指令"></p><hr>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 构建发版 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>一期一会</title>
       <link href="/2021/06/07/%E4%B8%80%E6%9C%9F%E4%B8%80%E4%BC%9A/"/>
       <url>/2021/06/07/%E4%B8%80%E6%9C%9F%E4%B8%80%E4%BC%9A/</url>
