@@ -1,0 +1,124 @@
+<!DOCTYPE html><html lang="zh-Hans"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content=""><meta name="keywords" content=""><meta name="author" content="沈留白"><meta name="copyright" content="沈留白"><title>人生如逆旅，我亦是行人 | 沈留白の博客</title><link rel="shortcut icon" href="/melody-favicon.ico"><link rel="stylesheet" href="/css/index.css?version=1.7.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css?version=1.7.0"><meta name="format-detection" content="telephone=no"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.css"><script src="https://cdn.jsdelivr.net/npm/gitalk@latest/dist/gitalk.min.js"></script><script src="https://cdn.jsdelivr.net/npm/blueimp-md5@2.10.0/js/md5.min.js"></script><link rel="dns-prefetch" href="https://hm.baidu.com"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?15a2cd71aee2ddf6ffb703d39beb34be";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();</script><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容:${query}"}},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  }
+} </script><meta name="generator" content="Hexo 4.2.1"></head><body><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar" data-display="false"><div class="author-info"><div class="author-info__avatar text-center"><img src="https://snowysound.github.io/img/avatar.png"></div><div class="author-info__name text-center">沈留白</div><div class="author-info__description text-center"></div><div class="follow-button"><a href="https://github.com/SnowySound" target="_blank" rel="noopener">Follow Me</a></div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/archives"><span class="pull-left">文章</span><span class="pull-right">199</span></a><a class="author-info-articles__tags article-meta" href="/tags"><span class="pull-left">标签</span><span class="pull-right">41</span></a></div></div></div><nav id="nav" style="background-image: url(https://my-blogimage.oss-cn-qingdao.aliyuncs.com/img/home.png)"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/">沈留白の博客</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus">   <a class="site-page" href="/">首页</a><a class="site-page" href="/archives">归档</a><a class="site-page" href="/tags">标签</a></span><span class="pull-right"><a class="site-page social-icon search"><i class="fa fa-search"></i><span> 搜索</span></a></span></div><div id="site-info"><div id="site-title">沈留白の博客</div><div id="site-sub-title">人生如逆旅，我亦是行人</div></div></nav><div id="content-outer"><div class="layout" id="content-inner"><div class="recent-post-item article-container"><a class="article-title" href="/2020/08/27/JavaScript-%E5%87%BD%E6%95%B0%E4%BC%A0%E5%8F%82%E6%98%AF%E6%8C%89%E5%80%BC%E4%BC%A0%E5%8F%82/">JavaScript 函数传参是按值传参</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2020-08-27</time><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/JavaScript/">JavaScript</a></span><div class="content">基本类型按值传参1234567var param = 10;function test (val) &#123;  val = 20;  console.log(val);&#125;test(param); // 打印 20console.log(param); // 打印 10
+
+引用类型按值传参123456789101112131415161718var param = &#123;  name: '张三'&#125;function testA (val) &#123;  val = new Object();  val.name = '李四';  val.age = 18;  console.log(val);&#125;function testB (val) &#123;  val.name = '李四';  val.age = 18;  console.log(val);&#125;testA(param); // 打印 &#123;name: '李四'，age: 18&#125;console.log(param); // 打印 &#123;name: '张三'&#125;testB(param); // 打印 &#123;name: '李四'，age: 18&#125;console.log(param); // 打印 &#123;name: '李四'，age: ...</div><a class="more" href="/2020/08/27/JavaScript-%E5%87%BD%E6%95%B0%E4%BC%A0%E5%8F%82%E6%98%AF%E6%8C%89%E5%80%BC%E4%BC%A0%E5%8F%82/#more" style="margin-top: 14px">阅读更多</a><hr></div><div class="recent-post-item article-container"><a class="article-title" href="/2020/08/27/Javascript-%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B%E4%B8%8E%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B/">JavaScript 基本类型与引用类型</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2020-08-27</time><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/JavaScript/">JavaScript</a></span><div class="content">数据类型
+基本类型：undefined, boolean, number, string, null
+引用类型: object
+
+基本类型
+基本类型的值无法通过方法进行更改
+1234567891011/**************** 例如 ****************/// 情况一，将小写字母转化成大写字母方法var words = 'abc';words.toUpperCase(); // ABCconsole.log(words); // abc// 情况二，给基本类型添加属性和方法var person = 'efg';person.age = 22;person.other = function() &#123;&#125;;console.log(person.age) // undefinedconsole.log(person.other) // undefined
+
+基本类型的变量是存放在栈区的（栈区指内存里的栈内存)
+
+
+引用类型
+引用类型的值可以通过方法更改
+12345678910/**************** 例如 ****************/var person = &#123;&#125;;person.name = 'XiaoMing';person.age = 22;person.other = function () &#123;  c ...</div><a class="more" href="/2020/08/27/Javascript-%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B%E4%B8%8E%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B/#more" style="margin-top: 14px">阅读更多</a><hr></div><div class="recent-post-item article-container"><a class="article-title" href="/2020/08/26/Vue-%E9%A1%B9%E7%9B%AE%E5%86%85%E6%96%87%E4%BB%B6%E7%9A%84%E4%BD%BF%E7%94%A8%E5%92%8C%E9%85%8D%E7%BD%AE/">Vue 项目内文件的使用和配置</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2020-08-26</time><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/Vue/">Vue</a></span><div class="content">文件结构12345678910111213141516171819202122├── build --------------------------------- webpack相关配置文件│   ├── build.js --------------------------webpack打包配置文件│   ├── check-versions.js ------------------------------ 检查npm,nodejs版本│   ├── dev-client.js ---------------------------------- 设置环境│   ├── dev-server.js ---------------------------------- 创建express服务器，配置中间件，启动可热重载的服务器，用于开发项目│   ├── utils.js --------------------------------------- 配置资源路径，配置css加载器│   ├── vue-loader.conf.js ----------------------------- 配置css加载器等│   ├── webpack.base.conf.js --------------------------- webpack基本配置│   ├── webpack.d ...</div><a class="more" href="/2020/08/26/Vue-%E9%A1%B9%E7%9B%AE%E5%86%85%E6%96%87%E4%BB%B6%E7%9A%84%E4%BD%BF%E7%94%A8%E5%92%8C%E9%85%8D%E7%BD%AE/#more" style="margin-top: 14px">阅读更多</a><hr></div><div class="recent-post-item article-container"><a class="article-title" href="/2020/08/24/%E6%8E%A5%E5%8F%A3%E8%AE%A4%E8%AF%81%E6%96%B9%E5%BC%8F-Bearer-Token/">接口认证方式: Bearer Token</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2020-08-24</time><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/Web/">Web</a></span><div class="content">简介
+Terminology Bearer Token      A security token with the property that any party in possession of      the token (a “bearer”) can use the token in any way that any other      party in possession of it can.  Using a bearer token does not      require a bearer to prove possession of cryptographic key material      (proof-of-possession).
+
+   All other terms are as defined in “The OAuth 2.0 Authorization   Framework” RFC6749
+应用1Authorization: Bearer [BEARER_TOKEN]
+
+参考资料
+Bearer Token 之 JWT 的介绍
+接口认证方式: Bearer Token
+创建 JWT 不记名令牌
+
+
+</div><a class="more" href="/2020/08/24/%E6%8E%A5%E5%8F%A3%E8%AE%A4%E8%AF%81%E6%96%B9%E5%BC%8F-Bearer-Token/#more" style="margin-top: 14px">阅读更多</a><hr></div><div class="recent-post-item article-container"><a class="article-title" href="/2020/08/19/markdown-%E5%AE%9E%E7%8E%B0%E6%98%BE%E7%A4%BA-html-%E6%A0%87%E7%AD%BE%E5%8E%9F%E6%A0%BC%E5%BC%8F/">Markdown 实现显示 html 标签原格式</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2020-08-19</time><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/Markdown/">Markdown</a></span><div class="content">问题来源  在 Mardown 里面我们希望展示 html 标签元素， 而不是使用他们的语法。这个时候就需要对 html 标签进行转义。
+解决方案
+通过使用 `` 转义符，进行转义
+
+如果这句话变成绿色，就说明 html 没有转义
+&lt;span style=&quot;color: green&quot;&gt;如果这句话变成绿色，就说明 html 没有转义&lt;/span&gt;
+
+
+通过使用转义字符表进行转义（避免直接成 html 标签）
+
+
+&amp;lt;span style=&quot;color: green&quot;&amp;gt; 如果这句话变成绿色，就说明 html 没有转义&amp;lt;/span&amp;gt;
+效果： &lt;span style=”color: green”&gt; 如果这句话变成绿色，就说明 html 没有转义&lt;/span&gt;
+
+
+
+以上
+
+</div><a class="more" href="/2020/08/19/markdown-%E5%AE%9E%E7%8E%B0%E6%98%BE%E7%A4%BA-html-%E6%A0%87%E7%AD%BE%E5%8E%9F%E6%A0%BC%E5%BC%8F/#more" style="margin-top: 14px">阅读更多</a><hr></div><div class="recent-post-item article-container"><a class="article-title" href="/2020/08/19/HTTP-%E4%B9%8B-Cookies/">HTTP 之 Cookie</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2020-08-19</time><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/Web/">Web</a></span><div class="content">基础概念
+Cookie 是一段不超过 4KB 的小型文本数据，由一个名称（Name）、一个值（Value）和其他几个用于控制 Cookies 有效期、安全性、使用范围的可选属性组成。
+HTTP　cookie （也称为 Web cookie，网络 cookie，浏览器 cookie 或者简称 cookie）是网站发送的一个小的数据片段，当用户浏览时，会通过用户的浏览器保存在用户的电脑上。
+cookie 这个术语是 web 浏览器程序员 Lou Montulli 杜撰出来的。派生自 magic cookie 这个术语，这个术语是 Unix 程序员用来描述程序接受和发送时没有改变的程序包。 magic cookie 又派生自 fortune cookie, 代表一种内嵌消息。
+
+HTTP cookies 详解
+HTTP cookies
+细说 Cookie
+HTTP 协议7之 Cookie–转
+
+Cookie 的使用（js-cookie 插件）
+安装
+1npm install js-cookie --save
+
+引用
+1import Cookies from 'js-cookie'
+
+使用
+
+存到 Cookie 中去123456// Create a cookie, valid across the entire site:Cookies.set('name', 'value');// C ...</div><a class="more" href="/2020/08/19/HTTP-%E4%B9%8B-Cookies/#more" style="margin-top: 14px">阅读更多</a><hr></div><div class="recent-post-item article-container"><a class="article-title" href="/2020/08/12/%E5%85%B3%E4%BA%8E%E8%B7%A8%E5%9F%9F%E7%9A%84%E4%BA%8C%E4%B8%89%E4%BA%8B/">关于跨域的二三事</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2020-08-12</time><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/JavaScript/">JavaScript</a></span><div class="content">前言跨域的安全限制都是对浏览器端来说的，服务器端是不存在跨域安全限制的。
+
+
+同源策略的概念可以追溯到1995年的Netscape Navigator 2。该策略最初设计用于保护对文档对象模型的访问，但后来扩展为保护全局JavaScript对象的敏感部分。
+同源策略有助于保护使用经过验证会话的网站。
+假设一种情况：A网站是一家银行，用户登陆以后，又去浏览其他网站，该网站在后台运行一些恶意JavaScript代码，该代码从银行网站请求数据。由于用户仍然登录到银行网站，因此恶意代码可以做任何用户在银行网站上可以执行的操作。
+
+
+什么是跨域？广义的跨域
+
+资源跳转： A链接、重定向、表单提交
+资源嵌入：&lt;link&gt;、&lt;script&gt;、&lt;img&gt;、&lt;frame&gt; 等 dom 标签，还有样式中 background: url()
+脚本请求：js 发起的 ajax 请求、dom 和 js 对象的跨域操作等
+
+
+狭义的跨域—同源策略
+同源策略/SOP（Same origin policy），由Netscape公司1995年引入浏览器，它是浏览器最核心也最基本的安全功能，如果缺少了同源策略，浏览器很容易受到XSS、CSFR等攻击。所谓同源是指”协议+域名+s端口”三者相同，即便两个不同的域名指向同一个ip地址，也非同源。
+
+同源策略限制以下几种行为： ...</div><a class="more" href="/2020/08/12/%E5%85%B3%E4%BA%8E%E8%B7%A8%E5%9F%9F%E7%9A%84%E4%BA%8C%E4%B8%89%E4%BA%8B/#more" style="margin-top: 14px">阅读更多</a><hr></div><div class="recent-post-item article-container"><a class="article-title" href="/2020/08/12/int-%E7%9A%84%E5%8F%96%E5%80%BC%E8%8C%83%E5%9B%B4/">int 的取值范围</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2020-08-12</time><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/C/">C</a></span><div class="content">c 语言下各类型的范围
+某一系统的编辑器下查看 c 语言类型范围的方法1234567#include "stdio.h"void main() &#123;	int a;	a = sizeof(long long);	printf("%d\n",a);&#125;
+
+小结
+在处理一些可能面临堆栈溢出的题目时，了解一个类型的最存储空间有利于解决此类问题。
+不同系统，不通编辑器下的 int 类型的范围可能不一样，通过 sizeof 可以查看 该类型在当前编辑器下所占用的字节数。
+
+在 Pascal 语言中，sizeof() 是一种内存容量度量函数，功能是返回一个变量或者类型的大小（以字节为单位）；在 C 语言中，sizeof() 是一个判断数据类型或者表达式长度的运算符。在Pascal 语言与C语言中，对 sizeof() 的处理都是在编译阶段进行。
+
+
+
+
+</div><a class="more" href="/2020/08/12/int-%E7%9A%84%E5%8F%96%E5%80%BC%E8%8C%83%E5%9B%B4/#more" style="margin-top: 14px">阅读更多</a><hr></div><div class="recent-post-item article-container"><a class="article-title" href="/2020/08/11/CCF-202006-1-%E9%A2%98/">CCF 202006-1 题</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2020-08-11</time><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/CCF/">CCF</a></span><div class="content">“线性分类器” 题目要求
+题目解答12345678910111213141516171819202122232425262728293031323334353637383940414243# include "stdio.h"# define MAXN 1000# define MAXM 20int main () &#123;	int m,n,i,j,temp,flag,arr[MAXN][2],test[MAXM][3],res[MAXM];	char arrc[MAXN];	scanf("%d%d", &amp;n, &amp;m);	for(i=0;i&lt;n;i++)&#123;		scanf("%d%d %c", &amp;arr[i][0], &amp;arr[i][1], &amp;arrc[i]);	&#125;	for(i=0;i&lt;m;i++)&#123;		scanf("%d%d%d", &amp;test[i][0], &amp;test[i][1], &amp;test[i][2]);	&#125;	for(i=0;i&lt;m;i++) &#123;		res[i] = 1;		flag = test[i][0] + test[i][1] * arr[0][0] + test[i][2] * arr[0][1] &gt; 0 ? 1 : -1;	 ...</div><a class="more" href="/2020/08/11/CCF-202006-1-%E9%A2%98/#more" style="margin-top: 14px">阅读更多</a><hr></div><div class="recent-post-item article-container"><a class="article-title" href="/2020/08/10/chrome-%E8%B0%83%E8%AF%95%E5%B7%A5%E5%85%B7/">chrome 调试工具</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2020-08-10</time><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/Chrome/">Chrome</a></span><div class="content">chrome 调试工具使用文档转载地址： (http://www.cnblogs.com/st-leslie/)
+
+chrome调试工具高级不完整使用指南（基础篇）
+chrome调试工具高级不完整使用指南（优化篇）
+chrome 调试工具高级不完整使用指南 - 1
+chrome 调试工具高级不完整使用指南 - 2
+
+
+</div><a class="more" href="/2020/08/10/chrome-%E8%B0%83%E8%AF%95%E5%B7%A5%E5%85%B7/#more" style="margin-top: 14px">阅读更多</a><hr></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/4/"><i class="fa fa-chevron-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/20/">20</a><a class="extend next" rel="next" href="/page/6/"><i class="fa fa-chevron-right"></i></a></div></nav></div></div><footer class="footer-bg" style="background-image: url(https://my-blogimage.oss-cn-qingdao.aliyuncs.com/img/home.png)"><div class="layout" id="footer"><div class="copyright">&copy;2019 - 2023 By 沈留白</div><div class="framework-info"><span>驱动 - </span><a href="http://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 - </span><a href="https://github.com/Molunerfinn/hexo-theme-melody" target="_blank" rel="noopener"><span>Melody</span></a></div><div class="footer_custom_text"><a href="https://beian.miit.gov.cn" target="_blank" rel="noopener">鲁ICP备19020181号</a></div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_site_uv"><i class="fa fa-user"></i><span id="busuanzi_value_site_uv"></span><span></span></span><span class="footer-separator">|</span><span id="busuanzi_container_site_pv"><i class="fa fa-eye"></i><span id="busuanzi_value_site_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.7.0"></script><script src="/js/fancybox.js?version=1.7.0"></script><script src="/js/sidebar.js?version=1.7.0"></script><script src="/js/copy.js?version=1.7.0"></script><script src="/js/transition.js?version=1.7.0"></script><script src="/js/scroll.js?version=1.7.0"></script><script src="/js/head.js?version=1.7.0"></script><script src="/js/search/local-search.js"></script><script>if(/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)) {
+  $('#nav').addClass('is-mobile')
+  $('footer').addClass('is-mobile')
+  $('#top-container').addClass('is-mobile')
+}</script><div class="search-dialog" id="local-search"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章"></div></div></div><hr><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>由</span> <a href="https://github.com/wzpan/hexo-generator-search" target="_blank" rel="noopener" style="color:#49B1F5;">hexo-generator-search</a>
+ <span>提供支持</span></div></div></div><span class="search-close-button"><i class="fa fa-times"></i></span></div><div class="search-mask"></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body></html>

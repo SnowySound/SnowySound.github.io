@@ -1,0 +1,164 @@
+<!DOCTYPE html><html lang="zh-Hans"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content=""><meta name="keywords" content=""><meta name="author" content="沈留白"><meta name="copyright" content="沈留白"><title>人生如逆旅，我亦是行人 | 沈留白の博客</title><link rel="shortcut icon" href="/melody-favicon.ico"><link rel="stylesheet" href="/css/index.css?version=1.7.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css?version=1.7.0"><meta name="format-detection" content="telephone=no"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.css"><script src="https://cdn.jsdelivr.net/npm/gitalk@latest/dist/gitalk.min.js"></script><script src="https://cdn.jsdelivr.net/npm/blueimp-md5@2.10.0/js/md5.min.js"></script><link rel="dns-prefetch" href="https://hm.baidu.com"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?15a2cd71aee2ddf6ffb703d39beb34be";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();</script><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容:${query}"}},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  }
+} </script><meta name="generator" content="Hexo 4.2.1"></head><body><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar" data-display="false"><div class="author-info"><div class="author-info__avatar text-center"><img src="https://snowysound.github.io/img/avatar.png"></div><div class="author-info__name text-center">沈留白</div><div class="author-info__description text-center"></div><div class="follow-button"><a href="https://github.com/SnowySound" target="_blank" rel="noopener">Follow Me</a></div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/archives"><span class="pull-left">文章</span><span class="pull-right">199</span></a><a class="author-info-articles__tags article-meta" href="/tags"><span class="pull-left">标签</span><span class="pull-right">41</span></a></div></div></div><nav id="nav" style="background-image: url(https://my-blogimage.oss-cn-qingdao.aliyuncs.com/img/home.png)"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/">沈留白の博客</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus">   <a class="site-page" href="/">首页</a><a class="site-page" href="/archives">归档</a><a class="site-page" href="/tags">标签</a></span><span class="pull-right"><a class="site-page social-icon search"><i class="fa fa-search"></i><span> 搜索</span></a></span></div><div id="site-info"><div id="site-title">沈留白の博客</div><div id="site-sub-title">人生如逆旅，我亦是行人</div></div></nav><div id="content-outer"><div class="layout" id="content-inner"><div class="recent-post-item article-container"><a class="article-title" href="/2019/09/28/%E6%90%AD%E5%BB%BA-Vue-%E9%A1%B9%E7%9B%AE%E4%B9%8B-Nginx-%E9%85%8D%E7%BD%AE/">搭建 Vue 项目之 Nginx 配置</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2019-09-28</time><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/Nginx/">Nginx</a></span><div class="content">转自小台的IT备忘录  Nginx Windows详细安装部署教程
+Nginx简介Nginx (engine x) 是一个高性能的HTTP和反向代理服务器，也是一个IMAP/POP3/SMTP服务器。Nginx是由伊戈尔·赛索耶夫为俄罗斯访问量第二的Rambler.ru 站点（俄文：Рамблер）开发的。
+它也是一种轻量级的Web服务器，可以作为独立的服务器部署网站（类似Tomcat）。它高性能和低消耗内存的结构受到很多大公司青睐，如淘宝网站架设。
+先下载直接去官网nginx.org，别有Linux和Windows两个版本
+安装部署1、下载完成后，解压缩，运行cmd，使用命令进行操作，不要直接双击nginx.exe，不要直接双击nginx.exe，不要直接双击nginx.exe
+一定要在dos窗口启动，不要直接双击nginx.exe，这样会导致修改配置后重启、停止nginx无效，需要手动关闭任务管理器内的所有nginx进程，再启动才可以
+2、使用命令到达nginx的加压缩后的目录
+1cd c:\nginx-1.15.2
+
+3、启动nginx服务，启动时会一闪而过是正常的
+1start nginx
+
+4、查看任务进程是否存在，dos或打开任务管理器都行
+1tasklist &#x2F;fi &quot;imagename eq nginx.exe&quot;
+
+
+打开任务管理器在进 ...</div><a class="more" href="/2019/09/28/%E6%90%AD%E5%BB%BA-Vue-%E9%A1%B9%E7%9B%AE%E4%B9%8B-Nginx-%E9%85%8D%E7%BD%AE/#more" style="margin-top: 14px">阅读更多</a><hr></div><div class="recent-post-item article-container"><a class="article-title" href="/2019/09/27/undefined-%E4%B8%8E%E6%9D%A1%E4%BB%B6%E5%88%A4%E6%96%AD/">undefined 与条件判断</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2019-09-27</time><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/JavaScript/">JavaScript</a><span class="article-meta__link">-</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/Vue/">Vue</a></span><div class="content">undefined 、true、false12345console.log(undefined &#x3D;&#x3D;&#x3D; true)console.log(undefined &#x3D;&#x3D;&#x3D; false)console.log(undefined &#x3D;&#x3D; true)console.log(undefined &#x3D;&#x3D; false)&#x2F;&#x2F; 全部打印出 false
+
+
+
+undefined 三目表达式12console.log(undefined ? &#39;undefinedTrue&#39; : &#39;undefinedFalse&#39;)&#x2F;&#x2F; 打印出 undefinedFalse
+
+
+
+undefined 条件判断123456if(undefined) &#123;	alert(&#39;true&#39;)&#125; else &#123;    alert(&#39;false&#39;)&#125;&#x2F;&#x2F; 显示false
+
+123456if(!undefined) &#123;	alert(&#39;true&#39;)&#125; else &#123;    alert(&#39;false&#39;)&#125;&#x2F;&#x2F; ...</div><a class="more" href="/2019/09/27/undefined-%E4%B8%8E%E6%9D%A1%E4%BB%B6%E5%88%A4%E6%96%AD/#more" style="margin-top: 14px">阅读更多</a><hr></div><div class="recent-post-item article-container"><a class="article-title" href="/2019/09/23/%E6%96%87%E4%BB%B6BOM%E5%A4%B4%E7%9A%84%E5%9D%91/">文件BOM头的坑</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2019-09-23</time><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/UTF-8/">UTF-8</a></span><div class="content">原文链接：http://www.cnblogs.com/qinmengjiao123-123/p/8325646.html               
+转载：Macchiato
+什么是BOM？(BOM (Byte Order Mark))BOM是用来判断文本文件是哪一种Unicode编码的标记，其本身是一个Unicode字符（”\uFEFF”），位于文本文件头部。
+在不同的Unicode编码中，对应的bom的二进制字节如下：
+Bytes Encoding
+ FE FF UTF16BE FF FE UTF16LE EF BB BF UTF8
+所以我们可以根据文件头部的几个字节和上面的表格对应来判断该文件是哪种编码形式。
+如何查看你文件的BOM字符？BOM头在记事本中是看不到的
+以UTF8为例，新建一个1.txt文件，然后打开文件 输入 hello world 然后另存为 此时更改文件的编码格式 由默认的ANSI 即GB2312(国标2312)编码改成UTF8
+然后通过下面的node代码，来打印该文本文件的buffer 就可以看到我们所说的BOM头字符
+123456let fs &#x3D; require(&#39;fs&#39;);fs.readFile(&#39;.&#x2F;1.txt&#39;,function(err,data)&#123;    	console.log ...</div><a class="more" href="/2019/09/23/%E6%96%87%E4%BB%B6BOM%E5%A4%B4%E7%9A%84%E5%9D%91/#more" style="margin-top: 14px">阅读更多</a><hr></div><div class="recent-post-item article-container"><a class="article-title" href="/2019/09/23/JavaScript%E7%A9%BA%E5%AF%B9%E8%B1%A1-%E7%A9%BA%E6%95%B0%E7%BB%84/">JavaScript空对象&amp;空数组</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2019-09-23</time><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/JavaScript/">JavaScript</a></span><div class="content">对象和空数组都是 Object 类型12console.log(typedof&#123;&#125;)&#x2F;&#x2F; 控制台输出 Objectconsole.log(typedof[])&#x2F;&#x2F; 控制台输出 Object
+
+
+
+空数组转化成 Number 会得到 0，空对象转化成 Number 会得到 NaN12console.log(Number(&#123;&#125;)&#x2F;&#x2F; 控制台输出 NaNconsoole.log(Number([])&#x2F;&#x2F; 控制台输出 0
+
+
+
+More1）空数组和空对象都是 Object 类型，因此直接用于 if 条件判断时会被转化成 true
+2) 任意值与布尔值进行比较时，会将两边的值都转化成 Number
+​    &lt;1&gt; 如果将空数组与布尔值 false 比较，false 转化为0，而空数组 [] 也转化为 0，因此 [] == false 的判断得到true。​    &lt;2&gt; 如果将空对象与布尔值false比较，false转化为0，而空对象{}转化为NaN，由于NaN与任何数都不相等，因此 {} == false 的判断得到 false。
+123456789if ([])&#x2F;&#x2F; 空数组是 Object 类型， if条件判断时会被转化成  ...</div><a class="more" href="/2019/09/23/JavaScript%E7%A9%BA%E5%AF%B9%E8%B1%A1-%E7%A9%BA%E6%95%B0%E7%BB%84/#more" style="margin-top: 14px">阅读更多</a><hr></div><div class="recent-post-item article-container"><a class="article-title" href="/2019/09/20/Markdowm%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95/">Markdowm常用语法</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2019-09-20</time><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/Markdown/">Markdown</a></span><div class="content">
+（转载自简书，作者Sealwk  原文链接）
+标题对于标题，Markdown的语法是在标题前面加#号,加一个 #就代表一级标题，两个##就代表二级标题，以此类推，像文中的“前言”和“标题”，我就是分别在前面加了两个##和四个####，从而形成你所看到的效果，语法如下：
+123456# 一级标题## 二级标题### 三级标题#### 四级标题##### 五级标题###### 六级标题
+
+特别需要注意的是在 #和内容之间最好留有一个空格，至于为什么这样，类似于代码规范吧！
+列表对于列表，Markdown的语法是在内容前面加一个短的横杠-，语法如下：
+12- 第一点- 第二点
+
+效果如下：
+
+第一点
+第二点
+
+如果你想要在列表上加上序号，可以这样写：
+12- 1.第一点- 2.第二点
+
+效果如下：
+
+1.第一点
+2.第二点
+
+同样的，在-和内容之间最好留有一个空格。
+链接在Markdown中插入链接的格式为：[显示文本](链接地址) 例如：[Seal&#39;s Blog](https://sealwk.github.io/) 显示出来的效果就是： Seal’s Blog 当我们点击Seal’s Blog时，就会跳转到我的GitHub博客。
+图片插入图片的写法与插入链接非常类似，语法如下： ![](图片链接地址) 我们可以看到，相比于插入链接，只是多了一个!号。当[]内容为空时，则不显 ...</div><a class="more" href="/2019/09/20/Markdowm%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95/#more" style="margin-top: 14px">阅读更多</a><hr></div><div class="recent-post-item article-container"><a class="article-title" href="/2019/09/20/v-on,v-model,v-bind/">v-bind、v-model、v-on</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2019-09-20</time><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/Vue/">Vue</a></span><div class="content">v-bind、v-model、v-on1.v-bind (缩写:)动态的绑定一个或多个特性、或一个组件prop表达式。
+123&lt;img :src&#x3D;&quot;imageSrc&quot;&gt;&lt;img v-bind&#x3D;&quot;imageSrc&quot;&gt;&lt;my-component :prop&#x3D;&quot;someThing&quot;&gt;
+
+2.v-model (没有缩写)在表单控件或者组件上创建双向绑定。
+1&lt;input v-model&#x3D;&quot;message&quot; placeholder&#x3D;&quot;use of v-model&quot;&#x2F;&gt;
+
+3.v-on (缩写@)监听DOM事件。
+12&lt;a v-on:click&#x3D;&quot;doSomthing&quot;&gt;&lt;a @click&#x3D;&quot;doSomthing&quot;&gt;
+
+
+</div><a class="more" href="/2019/09/20/v-on,v-model,v-bind/#more" style="margin-top: 14px">阅读更多</a><hr></div><div class="recent-post-item article-container"><a class="article-title" href="/2019/09/11/Vue%E7%9A%84%E8%AE%BE%E8%AE%A1%E7%90%86%E5%BF%B5/">Vue 设计理念</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2019-09-11</time><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/Vue/">Vue</a></span><div class="content">Vue的核心理念是什么？启发：简书crazy_banana    CSDN意念586    知乎
+Vue (读音 /vjuː/，类似于 view) 是一套用于构建用户界面的渐进式框架。与其它大型框架不同的是，Vue 被设计为可以自底向上逐层应用。Vue 的核心库只关注视图层，不仅易于上手，还便于与第三方库或既有项目整合。另一方面，当与现代化的工具链以及各种支持类库结合使用时，Vue 也完全能够为复杂的单页应用提供驱动。(摘自官网)
+BeforeJS 从 HTML  文件中获取 DOM 元素，然后添加事件，最后进行一系列的 JS 编程操作。（“DOM流”开发方式）
+问题：需求变化－＞代码重写－＞工作量增大＆＆逻辑混乱
+Then开发人员重新梳理代码的组织结构，将 JS 代码划分为三个模块，数据（M），视图（V），逻辑控制（*）。
+数据板块只含有数据内容，视图板块负责更改样式，逻辑控制负责联系视图板块和数据板块。
+优化： 需求变化 - &gt; 修改相应板块
+
+这种开发方式，实际上就是我们常说的 MV 模式，而MVC、MVVM、MVP[2] 等都是 MV  的衍生物。
+代码组织结构的目的：数据与视图间不会发生直接联系
+“DOM流” 缺陷原因：把 DOM 当作 Model，直接从DOM中获取数据，然后又改变 DOM 来更新视图。视图与模型实际上时混在一起了，代码组织自然很混乱，不易维护。
+ ...</div><a class="more" href="/2019/09/11/Vue%E7%9A%84%E8%AE%BE%E8%AE%A1%E7%90%86%E5%BF%B5/#more" style="margin-top: 14px">阅读更多</a><hr></div><div class="recent-post-item article-container"><a class="article-title" href="/2019/09/11/Hexo%E6%8C%87%E4%BB%A4/">hexo指令</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2019-09-11</time><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/Hexo/">Hexo</a></span><div class="content">init1$ hexo init [folder]
+
+​    新建一个网站。如果没有设置 folder ，Hexo 默认在目前的文件夹建立网站。
+new1$ hexo new [layout] &lt;title&gt;
+
+​    新建一篇文章。如果没有设置 layout 的话，默认使用 _config.yml 中的 default_layout 参数代替。如果标题包含空格的话，请使用引号括起来。
+1$ hexo new &quot;post title with whitespace&quot;
+
+
+
+
+参数
+描述
+
+
+
+-p, --path
+自定义新文章的路径
+
+
+-r, --replace
+如果存在同名文章，将其替换
+
+
+-s, --slug
+文章的 Slug，作为新文章的文件名和发布后的 URL
+
+
+默认情况下，Hexo  会使用文章的标题来决定文章文件的路径。对于独立页面来说，Hexo  会创建一个以标题为名字的目录，并在目录中放置一个 `index.md` 文件。你可以使用 `--path` 参数来覆盖上述行为、自行决定文件的目录：1hexo new page --path about&#x2F;me &quot;About me&quot;
+
+​    以上命令会创建一个 source/about/me.md 文件，同时 Front Matter 中的 title ...</div><a class="more" href="/2019/09/11/Hexo%E6%8C%87%E4%BB%A4/#more" style="margin-top: 14px">阅读更多</a><hr></div><div class="recent-post-item article-container"><a class="article-title" href="/2019/09/11/gitHub%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/">Hexo 和 Github 搭建博客</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2019-09-11</time><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/Blog/">Blog</a></span><div class="content">前言：使用 GitHub 搭建博客有很多优点：
+
+静态页面渲染，访问速度快
+Git 版本库存储，可以恢复之前文件，数据安全
+可以采用自己的域名搭建博客，充分实现个性化
+
+前期配置：1、官网安装 node.js。123&#x2F;&#x2F; 查看Node.js安装是否成功node -vnpm -v
+
+
+
+2、安装Git和配置好Git环境安装成功的象征就是
+
+在电脑上任何位置鼠标右键能够出现两个选择(Git GUI here &amp;&amp; Git Bash here)
+git --version
+// 显示安装的 git 版本
+
+
+3、注册Github账户，Github地址4、安装Hexo1234567&#x2F;&#x2F; 首先创建一个文件夹，我是在D盘建了一个blog文件夹&#x2F;&#x2F; 进入创建的文件夹cd blog&#x2F;&#x2F; 输入npm install hexo -g，开始安装 Hexonpm install hexo -g&#x2F;&#x2F; 查看 Hexo 是否安装成功hexo -v
+
+
+
+5、安装依赖12345678&#x2F;&#x2F; 输入hexo init，初始化该文件夹（有点漫长的等待。。。）hexo init&#x2F;&#x2F; 输入npm install，安装所需要的组件npm install&#x2F;&#x2F ...</div><a class="more" href="/2019/09/11/gitHub%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/#more" style="margin-top: 14px">阅读更多</a><hr></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/19/"><i class="fa fa-chevron-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/19/">19</a><span class="page-number current">20</span></div></nav></div></div><footer class="footer-bg" style="background-image: url(https://my-blogimage.oss-cn-qingdao.aliyuncs.com/img/home.png)"><div class="layout" id="footer"><div class="copyright">&copy;2019 - 2023 By 沈留白</div><div class="framework-info"><span>驱动 - </span><a href="http://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 - </span><a href="https://github.com/Molunerfinn/hexo-theme-melody" target="_blank" rel="noopener"><span>Melody</span></a></div><div class="footer_custom_text"><a href="https://beian.miit.gov.cn" target="_blank" rel="noopener">鲁ICP备19020181号</a></div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_site_uv"><i class="fa fa-user"></i><span id="busuanzi_value_site_uv"></span><span></span></span><span class="footer-separator">|</span><span id="busuanzi_container_site_pv"><i class="fa fa-eye"></i><span id="busuanzi_value_site_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.7.0"></script><script src="/js/fancybox.js?version=1.7.0"></script><script src="/js/sidebar.js?version=1.7.0"></script><script src="/js/copy.js?version=1.7.0"></script><script src="/js/transition.js?version=1.7.0"></script><script src="/js/scroll.js?version=1.7.0"></script><script src="/js/head.js?version=1.7.0"></script><script src="/js/search/local-search.js"></script><script>if(/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)) {
+  $('#nav').addClass('is-mobile')
+  $('footer').addClass('is-mobile')
+  $('#top-container').addClass('is-mobile')
+}</script><div class="search-dialog" id="local-search"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章"></div></div></div><hr><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>由</span> <a href="https://github.com/wzpan/hexo-generator-search" target="_blank" rel="noopener" style="color:#49B1F5;">hexo-generator-search</a>
+ <span>提供支持</span></div></div></div><span class="search-close-button"><i class="fa fa-times"></i></span></div><div class="search-mask"></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body></html>

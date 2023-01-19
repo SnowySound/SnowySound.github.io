@@ -1,0 +1,106 @@
+<!DOCTYPE html><html lang="zh-Hans"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content=""><meta name="keywords" content=""><meta name="author" content="沈留白"><meta name="copyright" content="沈留白"><title>人生如逆旅，我亦是行人 | 沈留白の博客</title><link rel="shortcut icon" href="/melody-favicon.ico"><link rel="stylesheet" href="/css/index.css?version=1.7.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css?version=1.7.0"><meta name="format-detection" content="telephone=no"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.css"><script src="https://cdn.jsdelivr.net/npm/gitalk@latest/dist/gitalk.min.js"></script><script src="https://cdn.jsdelivr.net/npm/blueimp-md5@2.10.0/js/md5.min.js"></script><link rel="dns-prefetch" href="https://hm.baidu.com"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?15a2cd71aee2ddf6ffb703d39beb34be";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();</script><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容:${query}"}},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  }
+} </script><meta name="generator" content="Hexo 4.2.1"></head><body><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar" data-display="false"><div class="author-info"><div class="author-info__avatar text-center"><img src="https://snowysound.github.io/img/avatar.png"></div><div class="author-info__name text-center">沈留白</div><div class="author-info__description text-center"></div><div class="follow-button"><a href="https://github.com/SnowySound" target="_blank" rel="noopener">Follow Me</a></div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/archives"><span class="pull-left">文章</span><span class="pull-right">199</span></a><a class="author-info-articles__tags article-meta" href="/tags"><span class="pull-left">标签</span><span class="pull-right">41</span></a></div></div></div><nav id="nav" style="background-image: url(https://my-blogimage.oss-cn-qingdao.aliyuncs.com/img/home.png)"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/">沈留白の博客</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus">   <a class="site-page" href="/">首页</a><a class="site-page" href="/archives">归档</a><a class="site-page" href="/tags">标签</a></span><span class="pull-right"><a class="site-page social-icon search"><i class="fa fa-search"></i><span> 搜索</span></a></span></div><div id="site-info"><div id="site-title">沈留白の博客</div><div id="site-sub-title">人生如逆旅，我亦是行人</div></div></nav><div id="content-outer"><div class="layout" id="content-inner"><div class="recent-post-item article-container"><a class="article-title" href="/2020/06/09/git-clone-http-%E4%B8%8E-ssh/">git clone HTTPS 与 SSH</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2020-06-09</time><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/Git/">Git</a></span><div class="content">Git 使用 HTTPS 与 SSH 的优缺点Git 使用 HTTPS 协议的优缺点
+优点 A： HTTPS 可以使用 用户名/密码 授权， 用户不需要在使用 Git 前先在本地生成 SSH 密钥再把 公钥 上传到服务器。
+优点 B： 企业防火墙一般都会打开 80 跟 443 这两个常见的 HTTP 和 HTTPS 协议的端口，使用 HTTP 和 HTTPS 的协议在架设了防火墙的企业里面可以绕过安全限制正常使用 Git。
+缺点： 使用 HTTP/HTTPS 处理速度慢意外还有一个最大的麻烦就是必须输入口令，但是现在的操作系统或者是其他 Git 工具都提供了 keychain 的功能，可以将账号密码都记录在系统里，例 OSX 的 Keychain 或者是 Windows 的凭证管理器
+
+Git 使用 SSH 的优缺点
+优点 A： 架设 Git 服务器是常使用 SSH 协议为传输协议，SSH 同时是一个验证授权的网络协议。
+缺点 A：SSH 服务端一般使用 22 端口，企业防火墙可能没打开这个端口
+缺点 B： SSH 协议的缺点在于你不能通过他实现匿名访问，即便只是读取数据，使用者也要通过 SSH 访问你的主机权限，这使得 SSH 不利于开源项目。如果只是在公司内网使用， SSH 可能是你唯一用到的协议，如果你需要同时提供匿名只读访问 和 SSH 协议，那么你除了为自己推送架设 SS ...</div><a class="more" href="/2020/06/09/git-clone-http-%E4%B8%8E-ssh/#more" style="margin-top: 14px">阅读更多</a><hr></div><div class="recent-post-item article-container"><a class="article-title" href="/2020/06/09/%E6%88%AA%E5%9B%BE-%E8%B4%B4%E5%9B%BE-%E5%B1%8F%E5%B9%95%E5%8F%96%E8%89%B2/">截图 &amp;&amp; 贴图 &amp;&amp; 屏幕取色</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2020-06-09</time><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/%E5%B0%8F%E5%B7%A5%E5%85%B7/">小工具</a></span><div class="content">截图 &amp;&amp; 贴图 &amp;&amp; 取色
+轻量却超强——推荐几款好用的截图工具
+snipaste 官网
+
+
+</div><a class="more" href="/2020/06/09/%E6%88%AA%E5%9B%BE-%E8%B4%B4%E5%9B%BE-%E5%B1%8F%E5%B9%95%E5%8F%96%E8%89%B2/#more" style="margin-top: 14px">阅读更多</a><hr></div><div class="recent-post-item article-container"><a class="article-title" href="/2020/06/08/CCF-201912-3-%E9%A2%98/">CCF 201912-3 题</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2020-06-08</time><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/CCF/">CCF</a></span><div class="content">“化学方程式” 题目要求
+题目解答
+思路
+</div><a class="more" href="/2020/06/08/CCF-201912-3-%E9%A2%98/#more" style="margin-top: 14px">阅读更多</a><hr></div><div class="recent-post-item article-container"><a class="article-title" href="/2020/06/02/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%BC%93%E5%AD%98/">浏览器缓存</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2020-06-02</time><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/Web/">Web</a></span><div class="content">前言  浏览器缓存是浏览器的一个特性，而不是一个 bug, 它的存在可以方便我们在下次打开相同界面时提高网站的加在速度，让我们得到更舒适的体验~
+缓存  
+静态网站浏览器缓存问题  大家都知道浏览器会对静态文件进行缓存，但是我们不妨思考一下这几个问题：
+
+静态文件为什么会被缓存？
+浏览器缓存是如何生效的？
+如何合理利用浏览器缓存？
+
+浏览器强制缓存跟协商缓存
+HTTP 报文
+
+HTTP 报文是浏览器和服务器通信时发送及响应的数据块
+浏览器 -&gt; 服务器 （请求报文）
+服务器 -&gt; 浏览器 （响应报文）
+
+
+报文主要分为两个部分
+包含属性的首部（header）——–附加信息(cookie, 缓存等)与缓存相关的信息都保存在 header 中
+包含数据的主体部分(body)——–HTTP 真正想传输的部分
+
+
+
+
+强制缓存以及协商缓存
+
+
+
+
+浏览器在加载资源时，根据请求头的expires和cache-control判断是否命中强缓存，是则直接从缓存读取资源，不会发请求到服务器。
+如果没有命中强缓存，浏览器一定会发送一个请求到服务器，通过last-modified和etag验证资源是否命中协商缓存，如果命中，服务器会将这个请求返回，但是不会返回这个资源的数据，依然是从缓存中读取资源。
+如果前面两者都没有命中，直接从服务器加载资源。
+
+强缓存与协商缓存的区别
+强缓存： 未将请 ...</div><a class="more" href="/2020/06/02/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%BC%93%E5%AD%98/#more" style="margin-top: 14px">阅读更多</a><hr></div><div class="recent-post-item article-container"><a class="article-title" href="/2020/06/01/%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E4%B8%8A%E4%BC%A0%E7%BD%91%E7%AB%99/">静态资源上传网站</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2020-06-01</time><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90/">静态资源</a></span><div class="content">公众号文章发布流程
+制图工具上制图
+新榜单编辑器编辑文章:https://edit.newrank.cn/
+微信公众平台发布文章：https://mp.weixin.qq.com/
+素材管理 -&gt; 新建图文消息
+素材管理 -&gt; 上传图片（视频）
+先预览然后发布
+
+
+
+文件更新
+在图片目录下更新图片（图片尺寸：420px*280px）
+在 C:\Users\19028868\Desktop\最近任务\巨商汇操作手册维护\newSimpleBlog\newSimpleBlog\doc 下更新xls表格
+在 /res/js/db/json.js 目录下更新：
+标题
+详情
+博客 url
+图片名称
+
+
+将文件上传到服务器静态资源目录下
+ftp 链接到 10.135.13.157 服务器（用户名&amp;密码: ftpuser）
+将json.js &amp;&amp; 图片上传到服务器（/home/ftpuser/wxl/目录下）
+网站登录特权账号 https://pum.haier.net/shterm/login
+远程链接服务器
+将更新的文件覆盖（img &amp;&amp; json.js）12cp &#x2F;home&#x2F;ftpuser&#x2F;wxl&#x2F;json.js &#x2F;webMedias&#x2F;_ui&#x2F;desktop&#x2F; ...</div><a class="more" href="/2020/06/01/%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E4%B8%8A%E4%BC%A0%E7%BD%91%E7%AB%99/#more" style="margin-top: 14px">阅读更多</a><hr></div><div class="recent-post-item article-container"><a class="article-title" href="/2020/05/22/chrome-%E6%88%AA%E9%95%BF%E5%9B%BE/">chrome 截长图</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2020-05-22</time><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/Chrome/">Chrome</a></span><div class="content">步骤
+打开要截取的 chrome 页面
+f12 或者是 ctrl+shift+i,打开调试窗口
+ctrl+shift+p, 打开搜索框
+在搜索框输入 screen， 找到 Capture full size screenshot，点击回车，就可以截取 chrome 当前页啦
+
+
+</div><a class="more" href="/2020/05/22/chrome-%E6%88%AA%E9%95%BF%E5%9B%BE/#more" style="margin-top: 14px">阅读更多</a><hr></div><div class="recent-post-item article-container"><a class="article-title" href="/2020/05/22/CCF-201903-2-%E9%A2%98/">CCF 201903-2 题</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2020-05-22</time><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/CCF/">CCF</a></span><div class="content">“二十四点” 题目要求
+题目解答1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071# include "stdio.h"# define MAX 100int sumAll(int i, int j,  char character[MAX][3], int number[MAX][4])&#123;	int sum;	switch(character[i][j]) &#123;		case 'x':			sum = number[i][j] * number[i][j+1];			break;		case '/':			sum = number[i][j] / number[i][j+1];			break;		case '-':			if((character[i][1] == 'x' || character[i][1] == '/') &amp;&amp;((j==2 &amp;&amp; (character[i][0] == '+' || character[i][0] == '-')||(character[i][2] == 'x' || characte ...</div><a class="more" href="/2020/05/22/CCF-201903-2-%E9%A2%98/#more" style="margin-top: 14px">阅读更多</a><hr></div><div class="recent-post-item article-container"><a class="article-title" href="/2020/05/22/CCF-201909-2-%E9%A2%98/">CCF 201909-2 题</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2020-05-22</time><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/CCF/">CCF</a></span><div class="content">“小明种苹果（续）” 题目要求
+题目解答12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849# include "stdio.h"# define MAX 1000void handleDefruiting(int i, int m, int arr[MAX], int res[MAX][2])&#123;	int j,k,sum,flag;	res[i][0]=arr[0];	res[i][1]=0;		for(j=1;j&lt;m;j++)&#123;		if(arr[j]&gt;0)&#123;			if(res[i][0] &gt; arr[j])&#123;				res[i][1]=1;				res[i][0]=arr[j];			&#125;		&#125; else &#123;			res[i][0]+=arr[j]; 		&#125;	&#125;&#125;int handleSum(int n, int res[MAX][2], int j)&#123;	int i,sum=0;	for(i=0;i&lt;n;i++)&#123;		sum+=res[i][j];	&#125;	return sum;&#125;int judgeT ...</div><a class="more" href="/2020/05/22/CCF-201909-2-%E9%A2%98/#more" style="margin-top: 14px">阅读更多</a><hr></div><div class="recent-post-item article-container"><a class="article-title" href="/2020/05/22/CCF-201912-2-%E9%A2%98/">CCF 201912-2 题</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2020-05-22</time><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/CCF/">CCF</a></span><div class="content">“回收站选址” 题目要求
+题目解答123456789101112131415161718192021222324252627282930313233343536373839# include "stdio.h"# define MAX 1000void rubbish(int n, int arr[MAX][2], int res[5])&#123;	int i,j,temp,flag;	for(i=0;i&lt;5;i++)&#123;		res[i]=0;	&#125;	for(i=0;i&lt;n;i++)&#123;		temp=0;		flag=0;		for(j=0;j&lt;n;j++)&#123;			flag+= arr[i][0]+1 == arr[j][0] &amp;&amp; arr[i][1] == arr[j][1] ? 1 : 0;			flag+= arr[i][0]-1 == arr[j][0] &amp;&amp; arr[i][1] == arr[j][1] ? 1 : 0;			flag+= arr[i][0] == arr[j][0] &amp;&amp; arr[i][1]+1 == arr[j][1] ? 1 : 0;			flag+= arr[i][0] == arr[j][0] &amp;&amp; arr[i][1]-1 ==  ...</div><a class="more" href="/2020/05/22/CCF-201912-2-%E9%A2%98/#more" style="margin-top: 14px">阅读更多</a><hr></div><div class="recent-post-item article-container"><a class="article-title" href="/2020/05/22/CCF-201812-2-%E9%A2%98/">CCF 201812-2 题</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2020-05-22</time><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/CCF/">CCF</a></span><div class="content">“小明放学” 题目要求
+题目解答123456789101112131415161718192021222324252627282930313233# include "stdio.h"# define MAX 100000int main () &#123;	int i,r,y,g,n,arr[MAX][2],sum;	long long res = 0;	scanf("%d%d%d%d", &amp;r,&amp;y,&amp;g,&amp;n);	sum = r+g+y;	for(i=0;i&lt;n;i++) &#123;		scanf("%d%d", &amp;arr[i][0],&amp;arr[i][1]);		if(arr[i][0] == 0) &#123;			res+=arr[i][1];		&#125; else &#123;			switch(arr[i][0])&#123;				case 1: 					arr[i][1]=(res+r-arr[i][1]) % sum;					break;				case 2:					arr[i][1]=(res+r+g+y-arr[i][1]) % sum;					break;				case 3: 					arr[i][1]=(res+r+g-arr[i][1]) % sum;					break;			& ...</div><a class="more" href="/2020/05/22/CCF-201812-2-%E9%A2%98/#more" style="margin-top: 14px">阅读更多</a><hr></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/7/"><i class="fa fa-chevron-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><span class="page-number current">8</span><a class="page-number" href="/page/9/">9</a><span class="space">&hellip;</span><a class="page-number" href="/page/20/">20</a><a class="extend next" rel="next" href="/page/9/"><i class="fa fa-chevron-right"></i></a></div></nav></div></div><footer class="footer-bg" style="background-image: url(https://my-blogimage.oss-cn-qingdao.aliyuncs.com/img/home.png)"><div class="layout" id="footer"><div class="copyright">&copy;2019 - 2023 By 沈留白</div><div class="framework-info"><span>驱动 - </span><a href="http://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 - </span><a href="https://github.com/Molunerfinn/hexo-theme-melody" target="_blank" rel="noopener"><span>Melody</span></a></div><div class="footer_custom_text"><a href="https://beian.miit.gov.cn" target="_blank" rel="noopener">鲁ICP备19020181号</a></div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_site_uv"><i class="fa fa-user"></i><span id="busuanzi_value_site_uv"></span><span></span></span><span class="footer-separator">|</span><span id="busuanzi_container_site_pv"><i class="fa fa-eye"></i><span id="busuanzi_value_site_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.7.0"></script><script src="/js/fancybox.js?version=1.7.0"></script><script src="/js/sidebar.js?version=1.7.0"></script><script src="/js/copy.js?version=1.7.0"></script><script src="/js/transition.js?version=1.7.0"></script><script src="/js/scroll.js?version=1.7.0"></script><script src="/js/head.js?version=1.7.0"></script><script src="/js/search/local-search.js"></script><script>if(/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)) {
+  $('#nav').addClass('is-mobile')
+  $('footer').addClass('is-mobile')
+  $('#top-container').addClass('is-mobile')
+}</script><div class="search-dialog" id="local-search"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章"></div></div></div><hr><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>由</span> <a href="https://github.com/wzpan/hexo-generator-search" target="_blank" rel="noopener" style="color:#49B1F5;">hexo-generator-search</a>
+ <span>提供支持</span></div></div></div><span class="search-close-button"><i class="fa fa-times"></i></span></div><div class="search-mask"></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body></html>
