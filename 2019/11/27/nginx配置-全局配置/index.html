@@ -1,0 +1,73 @@
+<!DOCTYPE html><html lang="zh-Hans"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="nginx配置-全局配置"><meta name="keywords" content="Nginx"><meta name="author" content="沈留白"><meta name="copyright" content="沈留白"><title>nginx配置-全局配置 | 沈留白の博客</title><link rel="shortcut icon" href="/melody-favicon.ico"><link rel="stylesheet" href="/css/index.css?version=1.7.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css?version=1.7.0"><meta name="format-detection" content="telephone=no"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.css"><script src="https://cdn.jsdelivr.net/npm/gitalk@latest/dist/gitalk.min.js"></script><script src="https://cdn.jsdelivr.net/npm/blueimp-md5@2.10.0/js/md5.min.js"></script><link rel="dns-prefetch" href="https://hm.baidu.com"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?15a2cd71aee2ddf6ffb703d39beb34be";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();</script><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容:${query}"}},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  }
+} </script><meta name="generator" content="Hexo 4.2.1"></head><body><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar" data-display="true"><div class="toggle-sidebar-info text-center"><span data-toggle="切换文章详情">切换站点概览</span><hr></div><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Nginx-全局配置"><span class="toc-number">1.</span> <span class="toc-text">Nginx 全局配置</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#user"><span class="toc-number">1.1.</span> <span class="toc-text">user</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#worker-processes"><span class="toc-number">1.2.</span> <span class="toc-text">worker_processes</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#error-log"><span class="toc-number">1.3.</span> <span class="toc-text">error_log</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Pid"><span class="toc-number">2.</span> <span class="toc-text">Pid</span></a></li></ol></div></div><div class="author-info hide"><div class="author-info__avatar text-center"><img src="https://snowysound.github.io/img/avatar.png"></div><div class="author-info__name text-center">沈留白</div><div class="author-info__description text-center"></div><div class="follow-button"><a href="https://github.com/SnowySound" target="_blank" rel="noopener">Follow Me</a></div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/archives"><span class="pull-left">文章</span><span class="pull-right">199</span></a><a class="author-info-articles__tags article-meta" href="/tags"><span class="pull-left">标签</span><span class="pull-right">41</span></a></div></div></div><div id="content-outer"><div id="top-container" style="background-image: url(https://my-blogimage.oss-cn-qingdao.aliyuncs.com/img/home.png)"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/">沈留白の博客</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus">   <a class="site-page" href="/">首页</a><a class="site-page" href="/archives">归档</a><a class="site-page" href="/tags">标签</a></span><span class="pull-right"><a class="site-page social-icon search"><i class="fa fa-search"></i><span> 搜索</span></a></span></div><div id="post-info"><div id="post-title">nginx配置-全局配置</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2019-11-27</time><div class="post-meta-wordcount"><span>字数总计: </span><span class="word-count">425</span><span class="post-meta__separator">|</span><span>阅读时长: 1 分钟</span></div></div></div></div><div class="layout" id="content-inner"><article id="post"><div class="article-container" id="post-content"><h3 id="Nginx-全局配置"><a href="#Nginx-全局配置" class="headerlink" title="Nginx 全局配置"></a>Nginx 全局配置</h3><p>还记得在 <a href="https://www.snowysound.github.io/blog/2019/11/21/nginx-%E7%9A%84%E7%AE%80%E5%8D%95%E7%90%86%E8%A7%A3/" target="_blank" rel="noopener">nginx简单理解</a>中得知， nginx 文件配置主要有五个区域。<br>现在记录，第一部分 nginx 全局配置。</p>
+<h4 id="user"><a href="#user" class="headerlink" title="user"></a>user</h4><blockquote>
+<ul>
+<li>语法：user user [group] </li>
+<li>默认值：nobody nobody </li>
+<li>如果主进程以root运行，Nginx将会调用setuid()/setgid()来设置用户/组。</li>
+<li>如果没有指定组，那么将使用与用户名相同的组。</li>
+<li>默认情况下会使用nobody用户与nobody组（或者nogroup），或者在编译时指定的–user=USER和–group=GROUP的值。</li>
+</ul>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">user nobody; #指定nginx worker进程运行用户以及用户组.</span><br></pre></td></tr></table></figure>
+
+<h4 id="worker-processes"><a href="#worker-processes" class="headerlink" title="worker_processes"></a>worker_processes</h4><blockquote>
+<ul>
+<li>语法：worker_process</li>
+<li>默认值：1</li>
+<li>指定了nginx要开启的进程数。每个nginx进程平均消耗10MB-12MB内存，根据经验，一般指定一个进程足够了，如果是多核CPU，建议指定和CPU的数量一样多的进程数即可。</li>
+</ul>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">worker_process 1; #指定了nginx要开启的进程数</span><br></pre></td></tr></table></figure>
+
+<h4 id="error-log"><a href="#error-log" class="headerlink" title="error_log"></a>error_log</h4><blockquote>
+<p>配置参数格式：error_log /path/to/log level;<br>Nginx错误日志级别</p>
+<ul>
+<li>常见的错误日志级别有debug | info | notice | warn | error | crit | alert | emerg</li>
+<li>级别越高记录的信息越少，如果不定义，默认级别为error.</li>
+<li>它可以配置在main、http、server、location段里。</li>
+<li>如果在配置文件中定义了两个error_log，在同一个配置段里的话会产生冲突，所以同一个段里只允许配置一个error_log。</li>
+</ul>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">error_log &#x2F;var&#x2F;log&#x2F;nginx&#x2F;error.log crit;</span><br><span class="line">error_log &#x2F;dev&#x2F;null; #关闭error_log</span><br></pre></td></tr></table></figure>
+
+<h3 id="Pid"><a href="#Pid" class="headerlink" title="Pid"></a>Pid</h3><blockquote>
+<p>配置参数 ：pid nginx.pid</p>
+<ul>
+<li>用来指定进程id的存储文件位置。</li>
+<li>可以使用kill命令来发送相关信号。</li>
+<li>如果想要重新读取配置文件，则可以使用：</li>
+</ul>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kill -HUP &#96;cat &#x2F;var&#x2F;run&#x2F;nginx.pid&#96;</span><br></pre></td></tr></table></figure>
+
+<hr>
+</div></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">沈留白</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://workstudy.top/2019/11/27/nginx%E9%85%8D%E7%BD%AE-%E5%85%A8%E5%B1%80%E9%85%8D%E7%BD%AE/">https://workstudy.top/2019/11/27/nginx%E9%85%8D%E7%BD%AE-%E5%85%A8%E5%B1%80%E9%85%8D%E7%BD%AE/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://workstudy.top">沈留白の博客</a>！</span></div></div><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Nginx/">Nginx</a></div><div class="post-qr-code"><div class="post-qr-code-item"><img class="post-qr-code__img" src="https://my-blogimage.oss-cn-qingdao.aliyuncs.com/img/%E5%BE%AE%E4%BF%A1%E6%94%AF%E4%BB%98.png"><div class="post-qr-code__desc">微信打赏我</div></div><div class="post-qr-code-item"><img class="post-qr-code__img" src="https://my-blogimage.oss-cn-qingdao.aliyuncs.com/img/%E5%BE%AE%E4%BF%A1%E6%B7%BB%E5%8A%A0%E5%A5%BD%E5%8F%8B.png"><div class="post-qr-code__desc">微信联系我</div></div></div><nav id="pagination"><div class="prev-post pull-left"><a href="/2019/11/28/nginx%E9%85%8D%E7%BD%AE-events%E5%9D%97%E9%85%8D%E7%BD%AE/"><i class="fa fa-chevron-left">  </i><span>nginx配置-events块配置</span></a></div><div class="next-post pull-right"><a href="/2019/11/26/VSCode-%E9%85%8D%E7%BD%AE-Markdown-%E7%8E%AF%E5%A2%83/"><span>VSCode 配置 Markdown 环境</span><i class="fa fa-chevron-right"></i></a></div></nav><div id="gitalk-container"></div><script>var gitalk = new Gitalk({
+  clientID: '86e967f96c08ba8d57e3',
+  clientSecret: 'd584b2bb75b9b78f14ffc02ce51130fae3fd6558',
+  repo: 'blogtalk',
+  owner: 'SnowySound',
+  admin: 'SnowySound',
+  id: md5(decodeURI(location.pathname)),
+  language: 'zh-CN'
+})
+gitalk.render('gitalk-container')</script></div></div><footer class="footer-bg" style="background-image: url(https://my-blogimage.oss-cn-qingdao.aliyuncs.com/img/home.png)"><div class="layout" id="footer"><div class="copyright">&copy;2019 - 2023 By 沈留白</div><div class="framework-info"><span>驱动 - </span><a href="http://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 - </span><a href="https://github.com/Molunerfinn/hexo-theme-melody" target="_blank" rel="noopener"><span>Melody</span></a></div><div class="footer_custom_text"><a href="https://beian.miit.gov.cn" target="_blank" rel="noopener">鲁ICP备19020181号</a></div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file-o"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.7.0"></script><script src="/js/fancybox.js?version=1.7.0"></script><script src="/js/sidebar.js?version=1.7.0"></script><script src="/js/copy.js?version=1.7.0"></script><script src="/js/transition.js?version=1.7.0"></script><script src="/js/scroll.js?version=1.7.0"></script><script src="/js/head.js?version=1.7.0"></script><script src="/js/search/local-search.js"></script><script>if(/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)) {
+  $('#nav').addClass('is-mobile')
+  $('footer').addClass('is-mobile')
+  $('#top-container').addClass('is-mobile')
+}</script><div class="search-dialog" id="local-search"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章"></div></div></div><hr><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>由</span> <a href="https://github.com/wzpan/hexo-generator-search" target="_blank" rel="noopener" style="color:#49B1F5;">hexo-generator-search</a>
+ <span>提供支持</span></div></div></div><span class="search-close-button"><i class="fa fa-times"></i></span></div><div class="search-mask"></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body></html>
